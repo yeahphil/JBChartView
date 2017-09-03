@@ -268,7 +268,7 @@ static UIColor *kJBChartInformationViewShadowColor = nil;
     }
     else
     {
-        valueLabelSize = [self.valueLabel.text sizeWithFont:self.valueLabel.font];
+        valueLabelSize = [self.valueLabel.text sizeWithAttributes:@{@"font": self.valueLabel.font}];
     }
 
     CGSize unitLabelSize = CGSizeZero;
@@ -278,7 +278,7 @@ static UIColor *kJBChartInformationViewShadowColor = nil;
     }
     else
     {
-        unitLabelSize = [self.unitLabel.text sizeWithFont:self.unitLabel.font];
+        unitLabelSize = [self.unitLabel.text sizeWithAttributes:@{@"font": self.unitLabel.font}];
     }
     
     CGFloat xOffset = ceil((self.bounds.size.width - (valueLabelSize.width + unitLabelSize.width)) * 0.5);
